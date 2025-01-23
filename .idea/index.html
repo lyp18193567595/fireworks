@@ -1,4 +1,6 @@
 
+
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -29,7 +31,7 @@
             font-size: 36px;
             z-index: 10;
             /* 应用动画 */
-            animation: rainbow 10s ease infinite;
+            animation: rainbow 10s ease infinite, bounce 2s ease-in-out infinite; /* 添加 bounce 动画 */
         }
 
         #fireworks {
@@ -58,6 +60,16 @@
             }
             100% {
                 background-position: 0% 50%;
+            }
+        }
+
+        /* 定义上下晃动动画 */
+        @keyframes bounce {
+            0%, 100% {
+                transform: translate(-50%, -50%) translateY(0);
+            }
+            50% {
+                transform: translate(-50%, -50%) translateY(-20px); /* 向上移动 20px */
             }
         }
     </style>
@@ -141,3 +153,6 @@
 </body>
 
 </html>
+
+
+
